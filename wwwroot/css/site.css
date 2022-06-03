@@ -1,0 +1,77 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.boton-chido{
+  display: inline-flex;
+  background-color: orange;
+  color: white;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.boton-chido::after{
+content: "";
+width: calc(100% + 60px);
+height: 100%;
+background-color: orange;
+position: absolute;
+left: calc(-100% - 80px);
+top:0;
+transition: 4.s ease-in-out all;
+border-bottom: 50px solid rgb(52,89,230);
+border-right: 50px solid transparent;
+z-index: 1;
+}
+
+.boton-chido a{
+  color: azure;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.boton-chido:hover{
+  color: azure;
+  text-decoration: none;
+  transition: .4s ease-in-out all;
+}
+
+.boton-chido:hover::after{
+  left: 0;
+  transition: .4s ease-in-out all;
+}
+
+.titulo{
+color: black;
+text-transform: uppercase;
+}
+
+.titulo-divisor{
+height: 0.4rem;
+width: 5rem;
+margin: 1rem;
+background-color: chocolate;
+border-radius: 0.25rem;
+}
